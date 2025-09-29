@@ -48,16 +48,6 @@ reconrabbit/
         npm install
         # Ensure DATABASE_URL in your .env points to your Postgres
         npm run dev
-ENV Var:
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=change-me
-    POSTGRES_DB=appdb
-    POSTGRES_PORT=5432
-    DATABASE_URL=postgres://postgres:change-me@localhost:5432/appdb
-    
-    # If using pgAdmin (Docker)
-    PGADMIN_DEFAULT_EMAIL=admin@example.com
-    PGADMIN_DEFAULT_PASSWORD=change-me
 
 ## Tech Stack
   Frontend: Vite + React (+ Tailwind / shadcn/ui optional)
