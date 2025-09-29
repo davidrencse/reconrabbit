@@ -1,4 +1,4 @@
-# Reconrabbit 🐇  
+# Reconrabbit  
 **Your Life OS** — organize work, school, and personal life into focused workspaces with AI assistance.
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
@@ -19,8 +19,6 @@
 - **Postgres-first:** Clear schema dump; easy local setup.
 
 ---
-
-## 🗂️ Repo Layout
 
 
 Features
