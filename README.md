@@ -9,23 +9,6 @@ Features
 - Fast UX: Vite + React + Tailwind (snappy, keyboard-first).
 - Postgres-first: Clear schema + migrations ready; reproducible local dev.
 
-Repo Layout:
-reconrabbit/
-├─ apps/
-│  ├─ web/            # React (Vite) frontend
-│  └─ api/            # Node/Express (or your backend of choice)
-├─ db/
-│  ├─ migrations/     # Migration files (recommended)
-│  ├─ seed/           # Tiny seed data (lookup tables, etc.)
-│  └─ schema.sql      # Schema-only dump (no data)
-├─ infra/
-│  ├─ docker-compose.yml   # Optional: Postgres + pgAdmin
-│  └─ pgadmin/
-│     └─ servers.json      # pgAdmin saved connections (no passwords)
-├─ .env.example       # Safe template (copy → .env locally)
-├─ .gitignore
-└─ README.md
-
 ## Start
 1. Clone
   git clone https://github.com/<you>/reconrabbit.git
