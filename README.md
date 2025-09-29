@@ -1,4 +1,27 @@
-# Reconrabbit
+# Reconrabbit 🐇  
+**Your Life OS** — organize work, school, and personal life into focused workspaces with AI assistance.
+
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Stack](https://img.shields.io/badge/stack-React%20%7C%20Node%20%7C%20Postgres-informational)
+
+> **TL;DR:** Frontend runs with `npm run dev`. Backend runs with `npx nodemon server.js` inside `backend/`. Postgres schema is in `db/schema.sql`. pgAdmin bookmarks live in `infra/pgadmin/servers.json` (no passwords).
+
+---
+
+##  Features
+
+- **Life Workspaces:** Separate “Work”, “School”, “Personal”, “Freelance”.
+- **Personal Intelligence:** AI-assisted capture, organization, and planning.
+- **Unified Hub:** Quick access to email, notes, tasks, links.
+- **Analytics:** Time/use dashboards per workspace.
+- **Fast UX:** Vite + React + Tailwind.
+- **Postgres-first:** Clear schema dump; easy local setup.
+
+---
+
+## 🗂️ Repo Layout
+
 
 Features
 
@@ -23,14 +46,12 @@ Features
 
 3. Run the app
    Frontend:
-       cd apps/web
        npm install
        npm run dev
   Backend:
-        cd apps/api
+        cd backend
         npm install
-        # Ensure DATABASE_URL in your .env points to your Postgres
-        npm run dev
+        npx nodemon server.js
 
 ## Tech Stack
   Frontend: Vite + React (+ Tailwind / shadcn/ui optional)
