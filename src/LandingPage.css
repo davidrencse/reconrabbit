@@ -1,0 +1,605 @@
+/* LandingPage.css */
+
+/* 1) ensure Helvetica Neue is available if the JS <link> loads late */
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.nav-item > a,
+.nav-item > a:visited,
+.nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.nav-item > a:hover,
+.nav-item .nav-link:hover {
+  color: white !important;
+}
+
+/* Ensure React Router Links inherit the same styling */
+.nav-item a[style] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.nav-item a[style]:hover {
+  color: white !important;
+}
+
+
+html, body, #root {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Keep your existing .landing-page but remove overflow: hidden */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  background-color: #000;
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+/* Background Image Styling */
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/black tech.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.header {
+  position: fixed; /* Makes header stick to top */
+  top: 0; /* Stick to the very top */
+  left: 0;
+  width: 100%;
+  
+  /* Your existing styles */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  z-index: 1000; /* Ensure header stays above all content */
+  border-bottom: none; /* Remove if you had this */
+  box-shadow: 0 10px 30px rgba(75, 75, 75, 0.3);
+}
+
+
+/* Modern Teams Section */
+.modern-teams-section {
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 80px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.modern-teams-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.modern-teams-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modern-teams-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 800px;
+  color: #ddd;
+}
+
+.modern-teams-cta {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 8px;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.modern-teams-cta:hover {
+  border-bottom-color: #fff;
+}
+
+.modern-teams-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  margin: 40px 0;
+}
+
+.modern-teams-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.modern-teams-list {
+  list-style: none;
+}
+
+.modern-teams-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.modern-teams-item::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .modern-teams-section {
+    padding: 60px 20px;
+  }
+  
+  .modern-teams-heading {
+    font-size: 2rem;
+  }
+  
+  .modern-teams-description {
+    font-size: 1.1rem;
+  }
+}
+
+.logo-image {
+  width: 120px; /* or whatever fits */
+  height: auto;
+  display: block;
+}
+
+
+.navigation a {
+  color: rgb(80, 57, 57);
+  text-decoration: none;
+  transition: opacity 0.3s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  
+}
+.navigation {
+  margin-left: 170px; /* Exact pixel push */
+}
+
+.navigation a:hover {
+  opacity: 0.8;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signup-btn {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px;
+  flex: 1;
+  position: relative;
+  z-index: 1; /* Above the background image */
+}
+
+
+.hero-container {
+  flex: 1;
+  min-height: 90vh;
+  position: relative;
+}
+
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.3);
+  line-height: 1.1;
+  min-height: 4.4rem; /* Prevent layout shift */
+}
+
+/* Blinking cursor effect */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 70px;
+  background-color: white;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: middle ;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ccc;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(71, 27, 27, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+  min-height: 3em; /* Prevent layout shift */
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cta-buttons.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.primary-btn {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Add glow to button */
+}
+
+.secondary-btn {
+  font-family: inherit;
+  background: transparent;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+.site-footer {
+  background-color: #000;
+  color: white;
+  padding: 4rem 5%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin: 10;
+  padding: 1rem 100px; /* controlled padding only */
+  flex-direction: column;
+  margin-left: 100px
+}
+
+.footer-section h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: rgba(139, 133, 133, 0.6);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: width 0.3s ease;
+}
+
+.footer-section a:hover::after {
+  width: 100%;
+}
+
+/* Navigation Base Styles */
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 1rem 0;
+  display: inline-block;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Base nav styles remain the same */
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 10px 0;
+  display: inline-block; /* Important for spacing */
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+  display: grid;
+}
+
+/* Keep the link clickable */
+.nav-item > a:hover {
+  color: white;
+  text-decoration: none; /* Remove underline if needed */
+}
+
+
+/* Dropdown appears below the link */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 2rem;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* Parent nav item */
+.nav-item {
+  position: relative; /* Essential for dropdown positioning */
+  display: inline-block; /* Needed for proper width */
+  padding: 0 15px; /* Space around text */
+}
+
+
+/* Show dropdown only when nav-link is hovered */
+.nav-item:hover .dropdown-menu {
+  display: grid;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Column Headers */
+/* Dropdown Content Styles (same as before) */
+.dropdown-column h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Feature Items */
+.feature-item {
+  margin-bottom: 1.5rem;
+}
+
+.dropdown-menu .feature-item strong a {
+  color: #ffffff !important;
+}
+
+.feature-item strong {
+  color: white;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Grid Layout Specifics */
+.dropdown-column:nth-child(1) {
+  /* Core Features column */
+  grid-column: 1;
+}
+
+.dropdown-column:nth-child(2) {
+  /* More column */
+  grid-column: 2;
+}
+
+.dropdown-column:nth-child(3) {
+  /* Integrations column */
+  grid-column: 3;
+}
+
+/* Hover Effects */
+.feature-item:hover strong {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.feature-item:hover p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Dropdown content styles remain the same */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Footer_inner__vHgz_ {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .Footer_footer__lJt10 {
+    padding: 60px 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer_inner__vHgz_ {
+    grid-template-columns: 1fr;
+  }
+  
+  .Footer_section__VUdD6 {
+    margin-bottom: 20px;
+  }
+  
+  .Footer_sectionItem__lDqAK {
+    margin-bottom: 10px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(calc(-50%), 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(calc(-50%), 0);
+  }
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+  }
+  
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    min-height: 5.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

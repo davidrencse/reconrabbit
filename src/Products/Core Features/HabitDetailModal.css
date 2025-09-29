@@ -1,0 +1,63 @@
+.habit-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 1rem;
+    overflow-y: hidden;
+  }
+  
+  .habit-modal-content {
+    background-color: #0e0e0e;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    color: white;
+    position: relative;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #777;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+  }
+  
+  .modal-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .modal-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #222;
+    padding-top: 2rem;
+  }
+  
+  .modal-stats h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  

@@ -1,0 +1,114 @@
+/* Import Inter (400-700 weights) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* ---------- General ---------- */
+* {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.ai-section {
+  min-height: 100vh;
+  padding-top: 200px;      /* keeps header clear of navbar */
+}
+
+/* ---------- Header ---------- */
+.ai-header {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.ai-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.ai-header p {
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.ai-header a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ---------- Cards ---------- */
+.ai-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ai-card {
+  background-color: #000;
+  border-radius: 24px;
+  width: 300px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 1px #222;
+}
+
+.ai-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.ai-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ---------- “+” Button ---------- */
+.plus-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  width: 48px;
+  height: 32px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.plus-btn:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ---------- Background Video ---------- */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.15;      /* lower number → clearer video */
+  pointer-events: none;
+}
