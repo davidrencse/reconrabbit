@@ -37,10 +37,12 @@
 
 
 html, body, #root {
-  min-height: 100%;
-  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;     /* allow scroll */
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* legacy IE/Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 * {
   margin: 0;
